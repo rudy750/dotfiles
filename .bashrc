@@ -56,13 +56,6 @@ fi
 
 
 #
-# wk*()
-#
-
-. ~/.bash_wk
-
-
-#
 # Shell prompt
 #
 
