@@ -13,10 +13,11 @@ my_path=$HOME/bin
 vmware_path=/Library/Application\ Support/VMWare\ Fusion
 ruby_path=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin
 local_path=/usr/local/bin:/usr/local/sbin
-homebrew_python=/usr/local/Cellar/python/2.7.1/bin
+homebrew_python=/usr/local/share/python
 export PATH=$my_path:$vmware_path:$ruby_path:$local_path:$homebrew_python:$PATH
 
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH="/usr/local/lib/node"
+
 # History stuff
 shopt -s histappend
 #shopt -s histverify

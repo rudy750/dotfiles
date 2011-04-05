@@ -37,11 +37,6 @@ case $HOST in
     www* | db* | web* | lb* ) UC=$RED ;;
 esac
 
-# Some special cases to the above
-if [[ ($HOST == "monitor") && ($DOMAIN == "bitprophet.org") ]]; then
-    UC=$CYAN HD=$SHORT
-fi
-
 
 # Prompt function because PROMPT_COMMAND is awesome
 function set_prompt() {

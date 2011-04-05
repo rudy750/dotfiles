@@ -6,7 +6,7 @@
 
 # Shell hooks; look in all possible locations and for both old and new versions
 # of the script, just in case I find myself on an older system.
-ROOTS="/usr/local/Cellar/python/2.7.1/bin /usr/bin /usr/local/bin"
+ROOTS="/usr/local/share/python /usr/local/bin /usr/bin"
 SUFFIXES="_bashrc .sh"
 for root in $ROOTS; do
     for suffix in $SUFFIXES; do
