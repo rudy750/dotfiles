@@ -1,0 +1,33 @@
+" ACK
+" Use Ack instead of grep
+set grepprg=ack
+
+" Tab between buffers
+nmap <tab> :bn<CR>
+nmap <S-tab> :bp<CR>
+
+" Mappings
+nnoremap <F1> :BufExplorer<cr>
+noremap <F2> :NERDTreeToggle<cr>
+nnoremap <F3> :TagbarToggle<cr>
+
+" Python
+au FileType python set ft=python.django softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79 colorcolumn=79
+
+" Select HTML function to select appropriate template syntax
+function! s:SelectHTML()
+ let n = 1
+ while n < 50 && n < line("$")
+  " check for django
+  if getline(n) =~ '{%\s*\(extends\|block\|if\|for\|include\|trans\)\>'
+    set ft=html.htmldjango
+    return
+  endif
+
+  let n = n + 1
+  endwhile
+  " go with html
+  set ft=html
+endfunction
+
+au BufRead *.html,*.htm  call s:SelectHTML()
