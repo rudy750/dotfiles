@@ -10,13 +10,11 @@ case $( uname -s ) in
     Linux )
         export PATH=/usr/local/bin:$PATH
         export WORKON_HOME=/opt/envs
-        alias ls='ls --color=auto'
         ;;
     Darwin )
         export PATH=/usr/local/bin:/usr/local/share/python:$PATH
         export HOMEBREW_TEMP=/usr/local/tmp
         export WORKON_HOME=$HOME/.virtualenvs
-        alias ls='ls -G'
         ;;
 esac
 
