@@ -1,25 +1,42 @@
-#git clone git://github.com/adrianrego/dotfiles.git ~/.dotfiles
+#!/bin/bash
 
-#rm -f ~/.bash_profile
-#rm -f ~/.profile
-#rm -f ~/.gitconfig
-#rm -f ~/.gitexcludes
-#rm -f ~/.hgrc
-#rm -f -R ~/.vim*
-#rm -f -R ~/.gvim*
+# Where are your dotfiles and where should they go
+DOTFILES_HOME="$HOME/Documents/Code/projects/dotfiles"
+DOTFILES_REPO="git://github.com/adrianrego/dotfiles.git"
 
-for f in $(ls .)
+# Remove vimfiles
+echo " -- Deleting current files -- "
+
+rm -f -R $HOME/.vim*
+rm -f -R $HOME/.gvim*
+rm -f -R $HOME/.bash_it
+
+# Clone your dotfiles repo
+echo " -- Cloning dotfiles -- "
+echo
+git clone $DOTFILES_REPO $DOTFILES_HOME
+
+echo " -- Linking files -- "
+for f in $(ls $DOTFILES_HOME)
 do
-
+  if [ $f != 'bootstrap.sh' ]
+    then
+      source="$DOTFILES_HOME/$f"
+      dest="$HOME/.$f"
+      $(ln -fs $source $dest)
+    fi
 done
 
+echo " -- Bash IT -- "
+# Install bash_it
+git clone git://github.com/revans/bash-it.git ~/.bash_it
 
-#ln -s ~/.dotfiles/bash_profile ~/.bash_profile
-#ln -s ~/.dotfiles/profile ~/.profile
-#ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-#ln -s ~/.dotfiles/gitexcludes ~/.gitexcludes
-#ln -s ~/.dotfiles/hgrc ~/.hgrc
-#ln -s ~/.dotfiles/janus.rake ~/.janus.rake
-#ln -s ~/.dotfiles/vimrc.local ~/
+echo
+echo " -- Janus -- "
+# Install Janus
+git clone git://github.com/carlhuda/janus.git ~/.vim
+cd ~/.vim
+rake
 
-
+echo
+echo " Restart your shell and enjoy! "
