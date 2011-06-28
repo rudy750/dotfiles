@@ -10,6 +10,7 @@ echo " -- Deleting current files -- "
 rm -f -R $HOME/.vim*
 rm -f -R $HOME/.gvim*
 rm -f -R $HOME/.bash_it
+rm -f -R $DOTFILES_HOME
 
 # Clone your dotfiles repo
 echo " -- Cloning dotfiles -- "
