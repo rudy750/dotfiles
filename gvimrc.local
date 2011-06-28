@@ -3,3 +3,5 @@ if has("gui_macvim")
 else
   set guifont=DejaVu\ Sans\ Mono\ 12
 endif
+
+color solarized
