@@ -4,4 +4,4 @@ else
   set guifont=DejaVu\ Sans\ Mono\ 12
 endif
 
-color solarized
+color jellybeans
