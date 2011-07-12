@@ -1,6 +1,5 @@
 skip_vim_plugin "taglist"
 
-vim_plugin_task "snipmate-snippets",  "git://github.com/scrooloose/snippets.git"
 vim_plugin_task "bufexplorer",        "git://github.com/vim-scripts/bufexplorer.zip.git"
 vim_plugin_task "tagbar",             "git://github.com/majutsushi/tagbar.git"
 vim_plugin_task "pep8",               "git://github.com/nvie/vim-pep8.git"
