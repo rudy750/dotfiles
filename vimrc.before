@@ -1,0 +1,4 @@
+" Menus
+" This must happen before the syntax system is enabled
+let no_buffers_menu=1
+set mousemodel=popup

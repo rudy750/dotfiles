@@ -1,0 +1,9 @@
+if has("gui_macvim")
+  set guifont=Monaco:h12
+else
+  set guifont=DejaVu\ Sans\ Mono\ 12
+endif
+
+set guioptions=-t
+set lines=44 columns=169
+color jellybeans
