@@ -36,7 +36,7 @@ BASH_PLUGINS="base.plugin.bash
 extract.plugin.bash
 git.plugins.bash
 rvm.plugin.bash
-vagrant.plugin.bash
+vagrant.plugins.bash
 virtualenv.plugin.bash"
 
 BASH_ALIASES="general"
