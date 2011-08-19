@@ -30,7 +30,7 @@ function! s:SelectHTML()
  while n < 50 && n < line("$")
   " check for django
   if getline(n) =~ '{%\s*\(extends\|block\|if\|for\|include\|trans\)\>'
-    set ft=html.htmldjango
+    set ft=htmldjango.html
     return
   endif
 
