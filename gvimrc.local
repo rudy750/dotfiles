@@ -1,7 +1,0 @@
-if has("gui_macvim")
-  set guifont=Menlo:h13
-else
-  set guifont=DejaVu\ Sans\ Mono\ 12
-endif
-
-color jellybeans
