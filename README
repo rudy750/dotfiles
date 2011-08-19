@@ -3,4 +3,4 @@ My dotfiles tailored for use with:
   -- janus (https://github.com/carlhuda/janus)
 
 One-line install for the brave:
-curl https://raw.github.com/adrianrego/dotfiles/master/bootstrap.sh -o - | sh
+curl https://raw.github.com/adrianrego/dotfiles/experimental/bootstrap.sh -o - | sh
