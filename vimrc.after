@@ -23,6 +23,7 @@ autocmd BufEnter * :syntax sync fromstart
 
 " Python
 au FileType python set ft=python.django softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79 colorcolumn=79
+au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 " Select HTML function to select appropriate template syntax
 function! s:SelectHTML()
@@ -40,4 +41,4 @@ function! s:SelectHTML()
   set ft=html
 endfunction
 
-au BufRead *.html,*.htm  call s:SelectHTML()
+au BufRead *.html,*.htm call s:SelectHTML()
