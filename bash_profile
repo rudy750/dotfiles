@@ -15,6 +15,7 @@ case $( uname -s ) in
         export PATH=/usr/local/bin:/usr/local/share/python:$PATH
         export HOMEBREW_TEMP=/usr/local/tmp
         export WORKON_HOME=$HOME/.virtualenvs
+        export NODE_PATH=/usr/local/lib/node
         ;;
 esac
 
