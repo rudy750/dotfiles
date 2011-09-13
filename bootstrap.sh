@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Where are your dotfiles and where should they go
-DOTFILES_HOME="$HOME/Documents/Code/projects/dotfiles"
+DOTFILES_HOME="$HOME/code/dotfiles"
 DOTFILES_REPO="git://github.com/adrianrego/dotfiles.git"
 
 # Remove vimfiles
