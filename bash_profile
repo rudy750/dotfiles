@@ -8,18 +8,18 @@ export PATH=/usr/local/bin:/usr/local/python:$PATH
 
 case $( uname -s ) in
     Linux )
+        [[ -s /usr/local/rvm/scripts/rvm ]] && source /usr/local/rvm/scripts/rvm
         export PATH=/usr/local/bin:$PATH
-        export WORKON_HOME=/opt/envs
         ;;
     Darwin )
         export PATH=/usr/local/bin:/usr/local/share/python:$PATH
         export HOMEBREW_TEMP=/usr/local/tmp
-        export WORKON_HOME=$HOME/.virtualenvs
         export NODE_PATH=/usr/local/lib/node
         ;;
 esac
 
 # pip and virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENV_USE_DISTRIBUTE=1
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
