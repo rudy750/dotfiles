@@ -1,6 +1,6 @@
 [user]
-    name = Adrian Rego
-    email = arego320@gmail.com
+    name = Rudy
+    email = rudy750@gmail.com
 [color]
     diff = auto
     status = auto
@@ -16,3 +16,6 @@
     default = tracking
 [core]
     excludesfile = "~/.gitexcludes"
+[http]
+ proxy = http://go-proxy.fpl.com:8080
+

@@ -14,7 +14,6 @@ case $( uname -s ) in
     Darwin )
         export PATH=/usr/local/bin:/usr/local/share/python:$PATH
         export HOMEBREW_TEMP=/usr/local/tmp
-        export NODE_PATH=/usr/local/lib/node
         ;;
 esac
 
@@ -43,3 +42,6 @@ unset MAILCHECK
 
 # Load Bash It
 source $BASH/bash_it.sh
+
+#for PLAY framework
+export PATH=$PATH:~/code/play
